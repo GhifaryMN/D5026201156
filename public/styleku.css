@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+#favorit {
+    color: black;
+
+}
+
+#favorit:hover {
+    color: red;
+}
+
+#sebar {
+    color: black;  
+}
+
+#sebar:hover {
+    color: red;
+}
+
+#chat {
+    
+    color: black;
+}
+  
+#chat:hover {
+    background-color: #e7e7e7;
+}
+
+#cart {
+    
+    color: black;
+}
+  
+#cart:hover {
+    background-color: #e7e7e7;
+}
+
+#buy {
+    
+    background-color: #ec0e49;
+}
+  
+#buy:hover {
+    background-color: #c10b3c;
+}

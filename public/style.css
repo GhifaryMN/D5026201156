@@ -1,0 +1,47 @@
+body {
+    
+    overflow-x: hidden;
+    background: black;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+
+
+header .title {
+    color: #fff;
+    padding-top: 15rem;
+}
+
+header .btn-primary {
+    background: transparent;
+    border: 2px solid #fff;
+}
+
+header .btn-primary:hover {
+    background: rgb(0, 0, 0);
+}
+
+header .btn-primary:focus {
+    background: transparent;
+}
+
+main {
+    color: #fff;
+}
+
+
+#button .btn-primary-outline {
+    color: rgb(255, 250, 250);
+    background: transparent;
+    border: 2px solid rgb(255, 255, 255);
+}
+#button .btn-primary-outline:hover {
+    background: rgb(230, 230, 230);
+}
+#button .btn-primary-outline:focus {
+    background: rgb(255, 255, 255);
+}

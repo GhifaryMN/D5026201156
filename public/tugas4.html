@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300&display=swap"
+        rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                alert("Text: " + $("#test").text());
+            });
+
+            $("#btn2").click(function () {
+                $("#gambar").html("<h2>yhaa, gambarnya hilang</h2>");
+            });
+            $("#btn3").click(function () {
+                $("p").toggleClass("ubah");
+            });
+        });
+    </script>
+    <title>Galeri Foto</title>
+    <style>
+        body {
+            background: url('img2/danau.jpg');
+            background-size: cover;
+            height: 100vh;
+            background-repeat: none;
+            width: 100%;
+            color: #fff;
+        }
+
+        .ubah {
+            color: rgb(190, 1, 1);
+            font-size: medium;
+            font-weight: bold;
+        }
+
+        p {
+            color: #fff;
+        }
+
+        #button .btn-outline-dark {
+            color: rgb(255, 250, 250);
+            background: transparent;
+            border: 2px solid rgb(255, 255, 255);
+        }
+
+        #button .btn-outline-dark:hover {
+            background: rgb(224, 224, 224);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container ">
+        <div class="row ">
+            <div class="container text-center">
+                <h1 class="title"><strong>Galeri Petualangan Ghifary</strong></h1>
+            </div>
+        </div>
+        <div id="gambar" class="row">
+            <div class="row gx-3 py-2">
+                <div class="col">
+                    <img src="img2/snorkeling.jpg" alt="" class="img-fluid rounded">
+                </div>
+                <div class="col">
+                    <img src="img2/curug.jpg" alt="" class="img-fluid rounded">
+                </div>
+                <div class="col">
+                    <img src="img2/bersama.jpg" alt="" class="img-fluid rounded">
+                </div>
+                <div class="col">
+                    <img src="img2/merbabu.jpg" alt="" class="img-fluid rounded">
+                </div>
+            </div>
+            <div class="row gx-3 py-2">
+                <div class="col">
+                    <img src="img2/kapal.jpg" alt="" class="img-fluid rounded">
+                </div>
+                <div class="col">
+                    <img src="img2/kocak.jpg" alt="" class="img-fluid rounded">
+                </div>
+                <div class="col">
+                    <img src="img2/batur.jpg" alt="" class="img-fluid rounded">
+                </div>
+                <div class="col">
+                    <img src="img2/tdc.jpg" alt="" class="img-fluid rounded">
+                </div>
+            </div>
+        </div>
+
+        <div id="button" class="row py-3">
+            <div class="col-4 text-center">
+                <button type="button" class="btn btn-outline-dark" id="btn1">klik ini</button>
+                <p id="test">jangan klik tombol ini!</p>
+            </div>
+            <div class="col-4 text-center">
+                <button type="button" class="btn btn-outline-dark" id="btn2">Click This for More Pictures!</button>
+            </div>
+            <div class="col-4 text-center">
+                <button type="button" class="btn btn-outline-dark" id="btn3">coba aja pencet</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
