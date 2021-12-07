@@ -1,28 +1,20 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Tutorial Membuat CRUD Pada Laravel - www.malasngoding.com</title>
-</head>
-<body>
+@extends('layout.happy')
+@section('title', 'Data Absen')
+@section('judulhalaman', 'Data Absen Pegawai Trafe')
 
-	<h2>www.malasngoding.com</h2>
-	<h3>Data Absen</h3>
+@section('konten')
 
-	<a href="/absen/tambah"> + Tambah Absen Baru</a>
 
-	<br/>
-	<br/>
-
-	<table border="1">
-		<tr>
-			<th>ID Pegawai</th>
+	<table  class="table">
+		<tr  class="table-success">
+				<th>ID Pegawai</th>
 			<th>Tanggal</th>
 			<th>Status</th>
 			<th>Opsi</th>
 		</tr>
-		@foreach($absen as $a)
-		<tr>
-			<td>{{ $a->IDPegawai }}</td>
+			@foreach($absen as $a)
+		<tr >
+           <td>{{ $a->IDPegawai }}</td>
 			<td>{{ $a->Tanggal }}</td>
 			<td>{{ $a->Status }}</td>
 			<td>
@@ -34,6 +26,8 @@
 		@endforeach
 	</table>
 
+		<a class="btn btn-success" href="/absen/tambah"> + Tambah Absen Baru</a>
 
-</body>
-</html>
+
+
+@endsection

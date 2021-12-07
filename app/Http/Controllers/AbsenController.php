@@ -79,7 +79,7 @@ public function hapus($id)
 	DB::table('absen')->where('ID',$id)->delete();
 
 	// alihkan halaman ke halaman pegawai
-	return redirect('/pegawai');
+	return redirect('/absen');
 }
 
 }

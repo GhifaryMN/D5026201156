@@ -1,26 +1,72 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Tutorial Membuat CRUD Pada Laravel - www.malasngoding.com</title>
-</head>
-<body>
+@extends('layout.happy')
+@section('title', 'Data Pegawai')
+@section('judulhalaman', 'Tambah Data Pegawai')
 
-	<h2><a href="https://www.malasngoding.com">www.malasngoding.com</a></h2>
-	<h3>Data Pegawai</h3>
+@section('konten')
 
-	<a href="/pegawai"> Kembali</a>
+<div class="card">
+    <div class="card-header text-right">Form Tambah Data Pegawai</div>
+    <div class="card-body">
 
-	<br/>
-	<br/>
+      <form action="/pegawai/store" method="POST" id="validation" class="row g-3">
+        {{ csrf_field() }}
+        <div class="row mt-3 justify-content-around">
+          <label class="col-lg-5 form-label">
+            Nama
+          </label>
+          <div class="col-lg-7">
+            <input type="text" class="form-control" required="required" id="name" name="nama" >
+          </div>
+        </div>
 
-	<form action="/pegawai/store" method="post">
-		{{ csrf_field() }}
-		Nama <input type="text" name="nama" required="required"> <br/>
-		Jabatan <input type="text" name="jabatan" required="required"> <br/>
-		Umur <input type="number" name="umur" required="required"> <br/>
-		Alamat <textarea name="alamat" required="required"></textarea> <br/>
-		<input type="submit" value="Simpan Data">
-	</form>
+        <div class="row my-3 justify-content-around">
+          <label class="col-lg-5 form-label">
+            Jabatan
+          </label>
+          <div class="col-lg-7">
+            <input type="text" class="form-control" required="required" name="jabatan" id="jabatan" >
+          </div>
+        </div>
 
-</body>
-</html>
+         <div class="row mb-3 justify-content-around">
+          <label class="col-lg-5 form-label">
+            Umur
+          </label>
+          <div class="col-lg-7">
+            <input type="number" class="form-control" required="required" name="umur" id="umur" >
+          </div>
+        </div>
+
+        <div class="row justify-content-around">
+          <label class="col-lg-5 form-label">
+            Alamat
+          </label>
+          <div class="col-lg-7">
+            <textarea required="required" name="alamat" class="form-control"></textarea>
+          </div>
+        </div>
+
+
+        <div class="row mt-5">
+            <div class="d-flex flex-lg-row flex-column justify-content-center">
+
+            <div class="col-5 d-flex flex-row-reverse">
+                <a href="/pegawai">
+                    <button class="btn btn-secondary">
+                    Kembali
+                    </button>
+                </a>
+            </div>
+            <div class="col-1"></div>
+            <div class="col-5">
+                <input type="submit" class="btn btn btn-success" value="Simpan Data" >
+            </div>
+
+            </div>
+        </div>
+      </form>
+
+    </div>
+  </div>
+
+@endsection
