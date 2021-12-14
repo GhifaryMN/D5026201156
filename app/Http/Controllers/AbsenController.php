@@ -11,7 +11,12 @@ class AbsenController extends Controller
     public function index()
     {
     	// mengambil data dari table absen
-    	$absen = DB::table('absen')->get();
+    	// $absen = DB::table('absen')->get();
+
+        $absen = DB::table('absen')
+        ->join('pegawai', 'absen.ID', '=', 'pegawai.pegawai_id')
+        ->select('absen.*', 'pegawai.pegawai_nama')
+        ->paginate(5);
 
     	// mengirim data absen ke view index
     	return view('absen.index',['absen' => $absen]);
@@ -33,10 +38,11 @@ public function tambah()
 public function store(Request $request)
 {
 	// insert data ke table absen
+    // dd($request->all());
 	DB::table('absen')->insert([
-		'IDPegawai' => $request->idpegawai,
-		'Tanggal' => $request->tanggal,
-		'Status' => $request->status
+		'idpegawai' => $request->idpegawai,
+		'tanggal' => $request->tanggal,
+		'status' => $request->status
 	]);
 	// alihkan halaman ke halaman absen
 	return redirect('/absen');
@@ -64,9 +70,9 @@ public function update(Request $request)
 {
 	// update data absen
 	DB::table('absen')->where('ID',$request->id)->update([
-		'IDPegawai' => $request->idpegawai,
-		'Tanggal' => $request->tanggal,
-		'Status' => $request->status
+		'idpegawai' => $request->idpegawai,
+		'tanggal' => $request->tanggal,
+		'status' => $request->status
 	]);
 	// alihkan halaman ke halaman awal
 	return redirect('/absen');

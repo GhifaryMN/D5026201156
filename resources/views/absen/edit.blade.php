@@ -79,7 +79,7 @@
                 <div class="d-flex flex-lg-row flex-column justify-content-center">
 
                 <div class="col-5 d-flex flex-row-reverse">
-                    <a href="/pegawai">
+                    <a href="/absen">
                         <button class="btn btn-secondary">
                         Kembali
                         </button>

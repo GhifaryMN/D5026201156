@@ -45,6 +45,11 @@ Route::post('/pegawai/update','PegawaiController@update');
 
 Route::get('/pegawai/hapus/{id}','PegawaiController@hapus');
 
+Route::get('/pegawai','PegawaiController@index');
+Route::get('/pegawai/cari','PegawaiController@cari');
+
+Route::get('/pegawai/detail/{id}','PegawaiController@view');
+
 //route CRUD Tabel TUGAS
 Route::get('/tugas','TugasController@index');
 
@@ -58,6 +63,13 @@ Route::post('/tugas/update','TugasController@update');
 
 Route::get('/tugas/hapus/{id}','TugasController@hapus');
 
+Route::get('/tugas','TugasController@index');
+
+Route::get('/tugas/cari','TugasController@cari');
+
+Route::get('/tugas/detail/{id}','TugasController@view');
+
+//route CRUD Tabel ABSEN
 Route::get('/absen','AbsenController@index');
 Route::get('/absen/tambah','AbsenController@tambah');
 Route::post('/absen/store','AbsenController@store');
@@ -65,3 +77,13 @@ Route::get('/absen/edit/{id}','AbsenController@edit');
 Route::post('/absen/update','AbsenController@update');
 Route::get('/absen/hapus/{id}','AbsenController@hapus');
 
+//route CRUD Tabel KABEL
+Route::get('/kabel','KabelController@index');
+Route::get('/kabel/tambah','KabelController@tambah');
+Route::post('/kabel/store','KabelController@store');
+Route::get('/kabel/edit/{id}','KabelController@edit');
+Route::post('/kabel/update','KabelController@update');
+Route::get('/kabel/hapus/{id}','KabelController@hapus');
+Route::get('/kabel','KabelController@index');
+Route::get('/kabel/cari','KabelController@cari');
+Route::get('/kabel/detail/{id}','KabelController@view');

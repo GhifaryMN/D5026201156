@@ -4,17 +4,22 @@
 
 @section('konten')
 
+<a class="btn btn-success" href="/absen/tambah"> + Tambah Absen Baru</a>
+	<table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Nama Pegawai</th>
+                <th scope="col">Tanggal</th>
+                <th scope="col">Status</th>
+                <th scope="col">Opsi</th>
+            </tr>
+        </thead>
+		<tbody>
 
-	<table  class="table">
-		<tr  class="table-success">
-				<th>ID Pegawai</th>
-			<th>Tanggal</th>
-			<th>Status</th>
-			<th>Opsi</th>
-		</tr>
-			@foreach($absen as $a)
+		@foreach($absen as $a)
 		<tr >
-           <td>{{ $a->IDPegawai }}</td>
+
+            <td>{{ $a->pegawai_nama }}</td>
 			<td>{{ $a->Tanggal }}</td>
 			<td>{{ $a->Status }}</td>
 			<td>
@@ -24,10 +29,10 @@
 			</td>
 		</tr>
 		@endforeach
+
+        </tbody>
 	</table>
 
-		<a class="btn btn-success" href="/absen/tambah"> + Tambah Absen Baru</a>
-
-
+        {{ $absen->links()  }}
 
 @endsection

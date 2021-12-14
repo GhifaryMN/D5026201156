@@ -1,41 +1,52 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Membuat CRUD Pada Laravel</title>
-</head>
-<body>
+@extends('layout.happy')
+@section('title', 'Data Tugas')
+@section('judulhalaman', 'Data Tugas ')
 
-	<h2>Tugas Hari H PWEB D</h2>
-	<h3>Data Tugas</h3>
+@section('konten')
 
-	<a href="/tugas/tambah"> + Tambah Pegawai Baru</a>
+<div class="container" align='center'>
+	<form action="/pegawai/cari" method="GET">
+		<input type="text" name="cari" placeholder="Cari tugas .." value="{{ old('cari') }}">
+		<input type="submit" class="btn btn btn-primary" value="CARI">
+	</form>
+</div>
+<a class="btn btn-success"  href="/tugas/tambah"> + Tambah tugas Baru</a>
+	<table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">No</th>
+                <th scope="col">Nama Pegawai</th>
+                <th scope="col">Tanggal</th>
+                {{-- <th scope="col">Jabatan</th>
+                <th scope="col">Umur</th> --}}
+                <th scope="col">Nama Tugas</th>
+                <th scope="col">Status</th>
+                <th scope="col">Opsi</th>
+            </tr>
+        <thead>
+        <tbody>
+            @foreach($tugas as $t)
+            <tr>
+                <td>{{ $loop->iteration }}</td>
+                <td>{{ $t->pegawai_nama }}</td>
+                <td>{{ $t->Tanggal }}</td>
+                {{-- <td>{{ $t->tugas_jabatan }}</td>
+                <td>{{ $t->tugas_umur }}</td> --}}
+                <td>{{ $t->NamaTugas }}</td>
+                <td>{{ $t->Status }}</td>
+                <td>
+                    <a href="/tugas/detail/{{ $t->ID }}">Detail</a>
+                    |
+                    <a href="/tugas/edit/{{ $t->ID }}">Edit</a>
+                    |
+                    <a href="/tugas/hapus/{{ $t->ID }}">Hapus</a>
 
-	<br/>
-	<br/>
-
-	<table border="1">
-		<tr>
-			<th>IDPegawai</th>
-			<th>Tanggal</th>
-			<th>NamaTugas</th>
-			<th>Status</th>
-            <th>Opsi</th>
-		</tr>
-		@foreach($tugas as $t)
-		<tr>
-			<td>{{ $t->IDPegawai }}</td>
-			<td>{{ $t->Tanggal }}</td>
-			<td>{{ $t->NamaTugas }}</td>
-            <td>{{ $t->Status }}</td>
-			<td>
-				<a href="/tugas/edit/{{ $t->ID }}">Edit</a>
-				|
-				<a href="/tugas/hapus/{{ $t->ID }}">Hapus</a>
-			</td>
-		</tr>
-		@endforeach
+                </td>
+            </tr>
+            @endforeach
+        </tbody>
 	</table>
 
+    {{ $tugas->links()  }}
 
-</body>
-</html>
+@endsection

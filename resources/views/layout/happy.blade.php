@@ -71,8 +71,7 @@
           <li><a href="/pegawai" class="nav-link scrollto"><i class='bx bx-male-female'></i></i> <span>Pegawai</span></a></li>
           <li><a href="/absen" class="nav-link scrollto"><i class="bx bx-file-blank"></i>  <span>Absen</span></a></li>
           <li><a href="/tugas" class="nav-link scrollto"><i class='bx bx-task'></i><span>Tugas</span></a></li>
-          <li><a href="/minggudepan" class="nav-link scrollto"><i class='bx bx-calendar-week'></i><span>Minggu Depan</span></a></li>
-          <li><a href="/praktikum" class="nav-link scrollto"><i class='bx bx-list-ul'></i><span>Praktikum</span></a></li>
+          <li><a href="/kabel" class="nav-link scrollto"><i class='bx bx-list-ul'></i><span>Kabel</span></a></li>
         </ul>
       </nav><!-- .nav-menu -->
     </div>
@@ -96,7 +95,7 @@
     </main>
 
 
-
+<!-- start  Footer -->
   <footer id="footer" style="margin-top= 120px;">
     <div class="container">
       <div class="copyright">

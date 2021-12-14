@@ -7,7 +7,7 @@
         {{ csrf_field() }}
 
         <div class="card">
-              <div class="card-header ">Form Tambah Data Pegawai</div>
+              <div class="card-header ">Form Tambah Data Absen Pegawai</div>
         <div class="card-body">
 
         <div class="container">
@@ -72,7 +72,7 @@
                 <div class="d-flex flex-lg-row flex-column justify-content-center">
 
                 <div class="col-5 d-flex flex-row-reverse">
-                    <a href="/pegawai">
+                    <a href="/absen">
                         <button class="btn btn-secondary">
                         Kembali
                         </button>
