@@ -52,6 +52,7 @@
   <body>
 
 
+
   <!-- ======= Mobile nav toggle button ======= -->
   <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
 
@@ -72,6 +73,8 @@
           <li><a href="/absen" class="nav-link scrollto"><i class="bx bx-file-blank"></i>  <span>Absen</span></a></li>
           <li><a href="/tugas" class="nav-link scrollto"><i class='bx bx-task'></i><span>Tugas</span></a></li>
           <li><a href="/kabel" class="nav-link scrollto"><i class='bx bx-list-ul'></i><span>Kabel</span></a></li>
+          <li><a href="/keranjangbelanja" class="nav-link scrollto"><i class='bx bx-list-ul'></i><span>Keranjang Belanja</span></a></li>
+
         </ul>
       </nav><!-- .nav-menu -->
     </div>
@@ -92,18 +95,19 @@
     @show
 
   </div>
-    </main>
-
-
-<!-- start  Footer -->
-  <footer id="footer" style="margin-top= 120px;">
-    <div class="container">
+  <!-- start  Footer -->
+  <footer id="footer" style="margin-top= 120px; ">
+    <div class="container" >
       <div class="copyright">
         &copy; Copyright <strong>
          <br> <span>5026201156 - Ghifary Muhammad N</span></strong>
       </div>
     </div>
   </footer><!-- End  Footer -->
+    </main>
+
+
+
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

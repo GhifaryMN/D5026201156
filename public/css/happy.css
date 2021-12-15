@@ -272,18 +272,19 @@ body {
   # Footer
   --------------------------------------------------------------*/
   #footer {
-    padding: 15px;
-    color: #f4f6fd;
+    padding: 35px;
+    color: #000000;
     font-size: 14px;
-    position: fixed;
-    left: 0;
+    position: relative;
+    text-align: center;
+    justify-content: center;
     bottom: 0;
-    width: 300px;
-    z-index: 9999;
-    background: #040b14;
+    /* right: 0;
+    width: 300px; */
+
   }
 
-  #footer .copyright {
+  /* #footer .copyright {
     text-align: center;
   }
 
@@ -292,12 +293,12 @@ body {
     text-align: center;
     font-size: 13px;
     color: #eaebf0;
-  }
+  } */
 
-  @media (max-width: 1199px) {
+  /* @media (max-width: 1199px) {
     #footer {
       position: static;
       width: auto;
       padding-right: 20px 15px;
-    }
+    } */
   }

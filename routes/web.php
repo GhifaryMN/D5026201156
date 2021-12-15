@@ -87,3 +87,13 @@ Route::get('/kabel/hapus/{id}','KabelController@hapus');
 Route::get('/kabel','KabelController@index');
 Route::get('/kabel/cari','KabelController@cari');
 Route::get('/kabel/detail/{id}','KabelController@view');
+
+//route CRUD Tabel keranjangbelanja
+Route::get('/keranjangbelanja','keranjangBelanjaController@index');
+Route::get('/keranjangbelanja/tambah','keranjangBelanjaController@tambah');
+Route::post('/keranjangbelanja/store','keranjangBelanjaController@store');
+// Route::get('/keranjangbelanja/edit/{id}','keranjangBelanjaController@edit');
+Route::post('/keranjangbelanja/update','keranjangBelanjaController@update');
+Route::get('/keranjangbelanja/hapus/{id}','keranjangBelanjaController@hapus');
+Route::get('/keranjangbelanja','keranjangBelanjaController@index');
+
